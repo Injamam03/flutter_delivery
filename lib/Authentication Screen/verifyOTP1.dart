@@ -34,18 +34,17 @@ class _VerifyotpState extends State<Verifyotp> {
               PinCode(
                 appContext: context,
                 length: 4,
-                obscureText: true, // Oculta los dígitos
+                obscureText: true, // Oculta los dígitos ===============
                 obscuringCharacter: '●',
                 enableActiveFill: true, // Habilita el color de fondo
                 onCompleted: (value) {
-                  //log("🔑 Passcode entered: $value");
+                     //log(" Passcode entered: $value");
                 },
                 pinTheme: PinCodeTheme(
                   shape: PinCodeFieldShape.box,
                   borderRadius: BorderRadius.circular(10),
                   fieldHeight: 60,
                   fieldWidth: 60,
-                  // Colores que funcionan bien en modo oscuro
                   activeColor: Colors.blueAccent,
                   inactiveColor: Colors.greenAccent,
                   selectedColor: Colors.red,
@@ -60,9 +59,8 @@ class _VerifyotpState extends State<Verifyotp> {
                 Text("A code has been sent to your phone number"),
                 SizedBox(height: 10,),
                 Text("Resend in 00:57",style: TextStyle(fontSize: 14,color: Colors.green,fontWeight: FontWeight.bold),),
+              
                 SizedBox(height: 10,),
-
-
 
                 GestureDetector(
                   onTap: (){
@@ -73,13 +71,10 @@ class _VerifyotpState extends State<Verifyotp> {
                     text: 'Verify',textStyle: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.white),
                   ),
                 ),
-
             ],
           ),
         ),
       ),
-
-
     );
   }
 }
